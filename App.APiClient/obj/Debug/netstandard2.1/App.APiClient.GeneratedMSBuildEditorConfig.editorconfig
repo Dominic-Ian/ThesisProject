@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = App.APiClient
+build_property.ProjectDir = C:\projects\Projects\ApiClient\WebServer\App.APiClient\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

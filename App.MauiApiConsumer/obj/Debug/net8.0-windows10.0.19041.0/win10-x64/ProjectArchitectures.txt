@@ -1,0 +1,1 @@
+C:\projects\Projects\ApiClient\WebServer\App.MauiApiConsumer\App.MauiApiConsumer.csproj;x64

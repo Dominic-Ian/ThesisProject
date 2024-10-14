@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MauiApiConsumer.Pages.FloodDataPage"
+             Title="FloodDataPage">
+
+    <FlexLayout Direction="Column">
+        <Button x:Name="btnShowFloodData" Text="Show Data" Clicked="btnShowFloodData_Clicked"/>
+
+        <Label x:Name="Data1" FontSize="Large"/>
+        <Label x:Name="Data2" FontSize="Large"/>
+        <Label x:Name="Data3" FontSize="Large"/>
+        <Label x:Name="Data4" FontSize="Large"/>
+        <Label x:Name="Data5" FontSize="Large"/>
+        
+        <!--<Label x:Name="DataLabel"
+               Text="Fetching data..."
+               FontSize="24"
+               HorizontalOptions="Center"
+               VerticalOptions="CenterAndExpand" />
+        <Button Text="Get Sensor 1 Data" 
+                Clicked="OnGetDataClicked"/>-->
+        
+        <ListView x:Name="floodDataListView">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Sensor1}"></Label>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Grid.Column="0" Text="{Binding Sensor2}"/>
+                                <Label Grid.Column="2" Text="{Binding Sensor2}"/>
+                            </Grid>
+                        </VerticalStackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </FlexLayout>
+</ContentPage>

@@ -1,0 +1,10 @@
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\bin\Debug\netstandard2.1\App.APiClient.deps.json
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\bin\Debug\netstandard2.1\App.APiClient.dll
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\bin\Debug\netstandard2.1\App.APiClient.pdb
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.csproj.AssemblyReference.cache
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.GeneratedMSBuildEditorConfig.editorconfig
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.AssemblyInfoInputs.cache
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.AssemblyInfo.cs
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.csproj.CoreCompileInputs.cache
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.dll
+C:\projects\Projects\ApiClient\WebServer\App.APiClient\obj\Debug\netstandard2.1\App.APiClient.pdb
