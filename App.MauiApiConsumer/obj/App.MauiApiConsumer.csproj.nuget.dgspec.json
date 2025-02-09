@@ -1,91 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\projects\\Projects\\ApiClient\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj": {}
+    "C:\\Users\\63966\\Desktop\\backup\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj": {}
   },
   "projects": {
-    "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj": {
+    "C:\\Users\\63966\\Desktop\\backup\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj",
-        "projectName": "App.APiClient",
-        "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj",
-        "packagesPath": "C:\\Users\\63966\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\63966\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.1"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
-          "dependencies": {
-            "Microsoft.Extensions.DependencyInjection": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            },
-            "Microsoft.Extensions.Options": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "System.Net.Http.Json": {
-              "target": "Package",
-              "version": "[8.0.1, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "NETStandard.Library": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\projects\\Projects\\ApiClient\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj",
+        "projectUniqueName": "C:\\Users\\63966\\Desktop\\backup\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj",
         "projectName": "App.MauiApiConsumer",
-        "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj",
+        "projectPath": "C:\\Users\\63966\\Desktop\\backup\\WebServer\\App.MauiApiConsumer\\App.MauiApiConsumer.csproj",
         "packagesPath": "C:\\Users\\63966\\.nuget\\packages\\",
-        "outputPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.MauiApiConsumer\\obj\\",
+        "outputPath": "C:\\Users\\63966\\Desktop\\backup\\WebServer\\App.MauiApiConsumer\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [
@@ -110,35 +36,19 @@
         "frameworks": {
           "net8.0-android34.0": {
             "targetAlias": "net8.0-android",
-            "projectReferences": {
-              "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj": {
-                "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net8.0-ios17.0": {
             "targetAlias": "net8.0-ios",
-            "projectReferences": {
-              "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj": {
-                "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net8.0-maccatalyst17.0": {
             "targetAlias": "net8.0-maccatalyst",
-            "projectReferences": {
-              "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj": {
-                "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj"
-              }
-            }
+            "projectReferences": {}
           },
           "net8.0-windows10.0.19041": {
             "targetAlias": "net8.0-windows10.0.19041.0",
-            "projectReferences": {
-              "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj": {
-                "projectPath": "C:\\projects\\Projects\\ApiClient\\WebServer\\App.APiClient\\App.APiClient.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {
@@ -151,6 +61,26 @@
         "net8.0-android34.0": {
           "targetAlias": "net8.0-android",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "Microcharts.Maui": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -163,11 +93,31 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.91, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )",
               "autoReferenced": true
+            },
+            "Particle.Maui": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Plugin.Firebase.CloudMessaging": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "SkiaSharp.Views": {
+              "target": "Package",
+              "version": "[2.88.8, )"
+            },
+            "SkiaSharp.Views.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[2.88.8, )"
             }
           },
           "imports": [
@@ -194,6 +144,26 @@
         "net8.0-ios17.0": {
           "targetAlias": "net8.0-ios",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "Microcharts.Maui": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -206,11 +176,31 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.91, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )",
               "autoReferenced": true
+            },
+            "Particle.Maui": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Plugin.Firebase.CloudMessaging": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "SkiaSharp.Views": {
+              "target": "Package",
+              "version": "[2.88.8, )"
+            },
+            "SkiaSharp.Views.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[2.88.8, )"
             }
           },
           "imports": [
@@ -237,6 +227,26 @@
         "net8.0-maccatalyst17.0": {
           "targetAlias": "net8.0-maccatalyst",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "Microcharts.Maui": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -249,11 +259,31 @@
               "target": "Package",
               "version": "[8.0.3, )"
             },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.91, )"
+            },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.0, )",
               "autoReferenced": true
+            },
+            "Particle.Maui": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Plugin.Firebase.CloudMessaging": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "SkiaSharp.Views": {
+              "target": "Package",
+              "version": "[2.88.8, )"
+            },
+            "SkiaSharp.Views.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[2.88.8, )"
             }
           },
           "imports": [
@@ -281,6 +311,26 @@
         "net8.0-windows10.0.19041": {
           "targetAlias": "net8.0-windows10.0.19041.0",
           "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.2.2, )"
+            },
+            "FirebaseAdmin": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
+            "LiveChartsCore.SkiaSharpView.Maui": {
+              "target": "Package",
+              "version": "[2.0.0-rc2, )"
+            },
+            "Microcharts.Maui": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[8.0.1, )"
+            },
             "Microsoft.Extensions.Logging.Debug": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -292,6 +342,26 @@
             "Microsoft.Maui.Controls.Compatibility": {
               "target": "Package",
               "version": "[8.0.3, )"
+            },
+            "Microsoft.Maui.Controls.Maps": {
+              "target": "Package",
+              "version": "[8.0.91, )"
+            },
+            "Particle.Maui": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
+            "Plugin.Firebase.CloudMessaging": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "SkiaSharp.Views": {
+              "target": "Package",
+              "version": "[2.88.8, )"
+            },
+            "SkiaSharp.Views.Maui.Controls.Compatibility": {
+              "target": "Package",
+              "version": "[2.88.8, )"
             }
           },
           "imports": [
@@ -307,8 +377,24 @@
           "warn": true,
           "downloadDependencies": [
             {
+              "name": "Microsoft.AspNetCore.App.Runtime.win-x64",
+              "version": "[8.0.0, 8.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Crossgen2.win-x64",
+              "version": "[8.0.0, 8.0.0]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Runtime.win-x64",
+              "version": "[8.0.0, 8.0.0]"
+            },
+            {
               "name": "Microsoft.Windows.SDK.NET.Ref",
               "version": "[10.0.19041.31, 10.0.19041.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Runtime.win-x64",
+              "version": "[8.0.0, 8.0.0]"
             }
           ],
           "frameworkReferences": {
@@ -336,6 +422,9 @@
           "#import": []
         },
         "iossimulator-x64": {
+          "#import": []
+        },
+        "maccatalyst-arm64": {
           "#import": []
         },
         "maccatalyst-x64": {

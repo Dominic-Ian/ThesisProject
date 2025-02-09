@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MauiApiConsumer.Pages.DataCollectionView"
+             xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             Title="Data Collection">
+    
+    <Grid Padding="10" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Label x:Name="TxtDate" Text="Alamada Water Level" HorizontalOptions="CenterAndExpand" Margin="0,30,0,0" FontSize="16" 
+               VerticalOptions="CenterAndExpand" FontAttributes="Bold" Grid.Row="1"/>
+
+        <Grid Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Text="Refresh"
+                x:Name="btnRefreshButtonWaterlvl"
+                Clicked="btnRefreshButtonWaterlvl_Clicked"
+                BackgroundColor="LightGreen"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="10"
+                Grid.Column="0" />
+
+            <Button 
+                Text="Go To Pigcawayan"
+                x:Name="btnPigcawayanButtonWaterlvl"
+                Clicked="btnPigcawayanButtonWaterlvl_Clicked"
+                BackgroundColor="LightGreen"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="10"
+                Grid.Column="1" />
+
+            <Button 
+                Text="Water Flow"
+                x:Name="btnWaterFlowButtonWaterlvl"
+                Clicked="btnWaterFlowButtonWaterlvl_Clicked"
+                BackgroundColor="LightGreen"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"
+                Margin="10"
+                Grid.Column="2" />
+        </Grid>
+
+        <StackLayout Grid.Row="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+            <micro:ChartView 
+                x:Name="actualChartView"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="0,10">
+                <micro:ChartView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnChartViewTapped" />
+                </micro:ChartView.GestureRecognizers>
+            </micro:ChartView>
+            
+            <Label Text="Prediction Chart Every Hour" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Padding="15"/>
+            
+            <micro:ChartView 
+                x:Name="predictedChartView"
+                HeightRequest="200"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Margin="0,10">
+                <micro:ChartView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnChartViewTapped" />
+                </micro:ChartView.GestureRecognizers>
+            </micro:ChartView>
+        </StackLayout>
+    </Grid>
+</ContentPage>

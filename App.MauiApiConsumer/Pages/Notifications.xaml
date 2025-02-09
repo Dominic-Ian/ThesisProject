@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MauiApiConsumer.Pages.Notifications"
+             Title="Notifications">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16">
+            <!-- Header -->
+            <HorizontalStackLayout VerticalOptions="Start" Spacing="10" Margin="0,0,0,20">
+                <Image Source="back_icon.png" WidthRequest="24" HeightRequest="24" />
+                <Label Text="Notifications"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       TextColor="Green" />
+                <Image Source="bell_icon.png" WidthRequest="24" HeightRequest="24"
+                       HorizontalOptions="EndAndExpand" />
+            </HorizontalStackLayout>
+
+            <!-- TODAY Section -->
+            <StackLayout>
+                <!-- Frame with x:Name -->
+                <Frame x:Name="WarningFrame" CornerRadius="8" Padding="10" BackgroundColor="#FFC107" Margin="0,0,0,10">
+                    <HorizontalStackLayout>
+                        <Image Source="warning_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                        <Label Text="Action required. Secure property and be ready to evacuate if needed. Stay informed."
+                   FontSize="14" TextColor="Black" />
+                    </HorizontalStackLayout>
+                </Frame>
+
+                <!-- ListView -->
+                <ListView x:Name="ItemsListView" Margin="0,10,0,0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding WaterFlow}" FontSize="14" TextColor="Black" Padding="10" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <Label Text="TODAY" FontSize="18" FontAttributes="Bold" Margin="0,0,0,8" />
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#FFC107" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="warning_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="Action required. Secure property and be ready to evacuate if needed. Stay informed."
+                           FontSize="14" TextColor="Black" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#00796B" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="info_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="This is an important message requiring your attention. Kindly review the details."
+                           FontSize="14" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- YESTERDAY Section -->
+            <Label Text="YESTERDAY" FontSize="18" FontAttributes="Bold" Margin="0,20,0,8" />
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#00796B" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="info_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="System update in progress."
+                           FontSize="14" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#FFC107" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="warning_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="Evacuate now! Flood evacuation order in effect. Follow local authorities' instructions."
+                           FontSize="14" TextColor="Black" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#FF5722" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="danger_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="Danger! High flood risk detected. Take immediate action for your safety."
+                           FontSize="14" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <!-- THIS WEEK Section -->
+            <Label Text="THIS WEEK" FontSize="18" FontAttributes="Bold" Margin="0,20,0,8" />
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#00796B" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="info_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="New OTP received."
+                           FontSize="14" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Frame CornerRadius="8" Padding="10" BackgroundColor="#00796B" Margin="0,0,0,10">
+                <HorizontalStackLayout>
+                    <Image Source="info_icon.png" WidthRequest="24" HeightRequest="24" Margin="0,0,10,0" />
+                    <Label Text="Stay tuned for updates."
+                           FontSize="14" TextColor="White" />
+                </HorizontalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

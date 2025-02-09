@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MauiApiConsumer.Pages.FrontPage"
+            xmlns:micro="clr-namespace:Microcharts.Maui;assembly=Microcharts.Maui"
+             Title="FrontPage">
+
+    <ContentPage Title="Water Level" IconImageSource="dotnet_bot.png">
+        <StackLayout>
+            <!-- Refresh Button -->
+                <Button Text="ThinskPeak"
+                        x:Name="btnRefreshButton"
+                        Clicked="btnRefreshButton_Clicked"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Start"
+                        Margin="10" />
+
+                <!-- Swipe-to-Refresh -->
+                
+
+                <!--<Button x:Name="btnRefresh" Text="Refresh" Clicked="btnRefresh_Clicked" WidthRequest="80"/>-->
+            <micro:ChartView x:Name="chartView1" HeightRequest="500" Chart="{Binding Sensor1}" >
+                <micro:ChartView.GestureRecognizers>
+                    <!-- Adding a Tap Gesture Recognizer to the ChartView -->
+                    <TapGestureRecognizer Tapped="OnChartViewTapped1" />
+                </micro:ChartView.GestureRecognizers>
+            </micro:ChartView>
+        </StackLayout>
+    </ContentPage>
+    <ContentPage Title="Water Flow" IconImageSource="dotnet_bot.png">
+        <!--<StackLayout>
+            <CollectionView x:Name="collectionView" ItemsLayout="HorizontalList">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame Margin="10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width=".2*"/>
+                                    <ColumnDefinition Width=".8*"/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Timestamp}"/>
+                                <VerticalStackLayout Grid.Column="1" Grid.Row="0" Padding="5" VerticalOptions="Center">
+                                    <Label Text="{Binding WaterFlow}" FontSize="Medium" FontAttributes="Bold"/>
+                                    <Label Text="{Binding WaterLevel}" FontAttributes="Italic"/>
+                                </VerticalStackLayout>
+                            </Grid>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>-->
+        <!-- Refresh Button -->
+        <StackLayout>
+            <Button Text="Refresh Data"
+                    x:Name="btnRefreshButtonWaterlvl"
+                    Clicked="btnRefreshButtonWaterlvl_Clicked"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Start"
+                    Margin="10" />
+            <micro:ChartView x:Name="chartView" HeightRequest="500" Chart="{Binding Sensor1}">
+                <micro:ChartView.GestureRecognizers>
+                    <!-- Adding a Tap Gesture Recognizer to the ChartView -->
+                    <TapGestureRecognizer Tapped="OnChartViewTapped" />
+                </micro:ChartView.GestureRecognizers>
+            </micro:ChartView>
+        </StackLayout>
+    </ContentPage>
+</TabbedPage>

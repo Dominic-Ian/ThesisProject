@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App.MauiApiConsumer.Pages.Summary"
+             Title="Summary">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="BackgroundColor">#FFFFFF</Color>
+            <Color x:Key="ForegroundColor">#0A0A0A</Color>
+            <Color x:Key="CardColor">#FFFFFF</Color>
+            <Color x:Key="CardForegroundColor">#0A0A0A</Color>
+            <Color x:Key="SecondaryColor">#F3F4F6</Color>
+            <Color x:Key="SecondaryForegroundColor">#0A0A0A</Color>
+            <Color x:Key="BorderColor">#D1D5DB</Color>
+            <Thickness x:Key="CardPadding">16</Thickness>
+            <Thickness x:Key="CardMargin">8</Thickness>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout Padding="16">
+            <Label Text="FLOOD DETECTION SYSTEM 2023"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource ForegroundColor}"
+                   Margin="0,0,0,16" />
+
+            <HorizontalStackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="0,0,0,16">
+                <Label Text="October 10, 2023 | 3:00 PM"
+                       FontSize="18"
+                       TextColor="{DynamicResource ForegroundColor}" />
+                <!--<Button Text="LOGOUT"
+                        BackgroundColor="{DynamicResource SecondaryColor}"
+                        TextColor="{DynamicResource SecondaryForegroundColor}"
+                        Padding="8"
+                        CornerRadius="8"
+                        HorizontalOptions="EndAndExpand" />-->
+            </HorizontalStackLayout>
+
+            <Grid ColumnSpacing="16" RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Repeated Card -->
+                <Frame BackgroundColor="{DynamicResource CardColor}" CornerRadius="8" Padding="{DynamicResource CardPadding}" Margin="{DynamicResource CardMargin}" Grid.Row="0" Grid.Column="0">
+                    <VerticalStackLayout>
+                        <Label Text="LEVEL OF WATER"
+                               FontSize="18"
+                               FontAttributes="Bold"
+                               TextColor="{DynamicResource ForegroundColor}"
+                               Margin="0,0,0,8" />
+                        <HorizontalStackLayout>
+                            <Label Text="50%"
+                                   FontSize="36"
+                                   FontAttributes="Bold"
+                                   TextColor="{DynamicResource ForegroundColor}" />
+                            <Frame Padding="0" WidthRequest="64" HeightRequest="64" CornerRadius="32" BorderColor="Orange">
+                                <AbsoluteLayout>
+                                    <BoxView Color="Orange" HeightRequest="50" WidthRequest="100" VerticalOptions="End" />
+                                </AbsoluteLayout>
+                            </Frame>
+                        </HorizontalStackLayout>
+                        <Label Text="ACTION ZONE: 20%" FontSize="14" />
+                        <Label Text="EVACUATE ZONE: 50%" FontSize="14" />
+                        <Label Text="DANGER ZONE: 50%" FontSize="14" />
+                    </VerticalStackLayout>
+                </Frame>
+
+                <!-- Repeat the above Frame for other cards, modifying the content as needed -->
+                <Frame BackgroundColor="{DynamicResource CardColor}" CornerRadius="8" Padding="{DynamicResource CardPadding}" Margin="{DynamicResource CardMargin}" Grid.Row="0" Grid.Column="1">
+                    <VerticalStackLayout>
+                        <Label Text="LEVEL OF WATER"
+               FontSize="18"
+               FontAttributes="Bold"
+               TextColor="{DynamicResource ForegroundColor}"
+               Margin="0,0,0,8" />
+                        <HorizontalStackLayout>
+                            <Label Text="50%"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   TextColor="{DynamicResource ForegroundColor}" />
+                            <Frame Padding="0" WidthRequest="64" HeightRequest="64" CornerRadius="32" BorderColor="Orange">
+                                <AbsoluteLayout>
+                                    <BoxView Color="Orange" HeightRequest="50" WidthRequest="100" VerticalOptions="End" />
+                                </AbsoluteLayout>
+                            </Frame>
+                        </HorizontalStackLayout>
+                        <Label Text="ACTION ZONE: 20%" FontSize="14" />
+                        <Label Text="EVACUATE ZONE: 50%" FontSize="14" />
+                        <Label Text="DANGER ZONE: 50%" FontSize="14" />
+                    </VerticalStackLayout>
+                </Frame>
+            </Grid>
+
+            <Label Text="CONTACT US: 0987654321 | 0800-123-456 | SMART"
+                   FontSize="14"
+                   TextColor="{DynamicResource ForegroundColor}"
+                   Margin="0,16,0,0" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

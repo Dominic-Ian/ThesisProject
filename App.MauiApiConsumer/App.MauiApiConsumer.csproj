@@ -2,6 +2,8 @@
 
 	<PropertyGroup>
 		<TargetFrameworks>net8.0-android;net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
+		<AndroidTargetSdkVersion>34</AndroidTargetSdkVersion>
+		<AndroidMinSdkVersion>21</AndroidMinSdkVersion>
 		<TargetFrameworks Condition="$([MSBuild]::IsOSPlatform('windows'))">$(TargetFrameworks);net8.0-windows10.0.19041.0</TargetFrameworks>
 		<!-- Uncomment to also build the tizen app. You will need to install tizen by following this: https://github.com/Samsung/Tizen.NET -->
 		<!-- <TargetFrameworks>$(TargetFrameworks);net8.0-tizen</TargetFrameworks> -->
@@ -38,6 +40,33 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net8.0-android|AnyCPU'">
+	  <AndroidPackageFormat>apk</AndroidPackageFormat>
+	  <DebugSymbols>True</DebugSymbols>
+	  <Debugger>Native</Debugger>
+	  <AndroidKeyStore>False</AndroidKeyStore>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net8.0-android|AnyCPU'">
+	  <Debugger>Native</Debugger>
+	  <AndroidKeyStore>False</AndroidKeyStore>
+	  <RunAOTCompilation>True</RunAOTCompilation>
+	  <AndroidEnableProfiledAot>True</AndroidEnableProfiledAot>
+	  <PublishTrimmed>True</PublishTrimmed>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+		<AndroidKeyStore>true</AndroidKeyStore>
+		<AndroidSigningKeyStore>C:\Users\63966\.android\debug.keystore</AndroidSigningKeyStore>
+		<AndroidSigningStorePassword>android</AndroidSigningStorePassword>
+		<AndroidSigningKeyAlias>FDSApp</AndroidSigningKeyAlias>
+		<AndroidSigningKeyPassword>android</AndroidSigningKeyPassword>
+	</PropertyGroup>
+
+	
+
+
+
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
@@ -57,17 +86,59 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Platforms\Android\google-services.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <GoogleServicesJson Include="Platforms\Android\google-services.json" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+		<PackageReference Include="FirebaseAdmin" Version="3.1.0" />
+		<PackageReference Include="LiveChartsCore.SkiaSharpView.Maui" Version="2.0.0-rc2" />
+		<PackageReference Include="Microcharts.Maui" Version="1.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="Microsoft.Maui.Controls.Maps" Version="8.0.91" />
+		<PackageReference Include="Particle.Maui" Version="1.0.3" />
+		<PackageReference Include="Plugin.Firebase.CloudMessaging" Version="3.1.2" />
+		<PackageReference Include="SkiaSharp.Views" Version="2.88.8" />
+		<PackageReference Include="SkiaSharp.Views.Maui.Controls.Compatibility" Version="2.88.8" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\App.APiClient\App.APiClient.csproj" />
+		<MauiGoogleServicesJson Include="Platforms/Android/google-services.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\FloodDataPage.xaml">
+	  <MauiXaml Update="Pages\AlertPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\DataCollectionView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\DisplayFCMToken.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\FrontPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Notifications.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\PredictionPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\WaterFlowAlamadaPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\WaterFlowPigcawayanPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\WaterLevelPigcawayanPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

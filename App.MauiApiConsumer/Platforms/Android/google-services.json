@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "120872942553",
+    "project_id": "fdsapppushnotifications",
+    "storage_bucket": "fdsapppushnotifications.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:120872942553:android:adf09204fe1b82a28fb7c8",
+        "android_client_info": {
+          "package_name": "com.mycompany.myapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeHp0gF3jRoXB_eXXpGwl7IWR2Kn0K99A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

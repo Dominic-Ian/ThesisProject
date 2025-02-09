@@ -4,7 +4,7 @@ namespace App.MauiApiConsumer
 {
 	public partial class App : Application
 	{
-		public App(FloodDataPage floodDataPage)
+		public App(DataCollectionView floodDataPage)
 		{
 			InitializeComponent();
 
