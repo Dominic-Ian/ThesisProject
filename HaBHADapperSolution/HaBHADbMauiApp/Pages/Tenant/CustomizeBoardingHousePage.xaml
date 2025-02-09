@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HaBHADbMauiApp.Pages.Tenant.CustomizeBoardingHousePage"
+             Title="CustomizeBoardingHousePage" BackgroundColor="Gold">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Grid.Row="0" Text="Habha" FontSize="24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+        <Label Grid.Row="1" Text="BoardingHouse" FontSize="24" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="Black" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+
+        <StackLayout Grid.Row="2" Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Room Number: " FontAttributes="Bold" Grid.Column="0" Margin="0,10,0,0" />
+                <Entry x:Name="TxtRoomNumber" Grid.Column="1" TextColor="Black" HeightRequest="40" WidthRequest="270" Background="White" Keyboard="Numeric"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Room Size: " FontAttributes="Bold" Grid.Column="0" Margin="0,10,0,0" />
+                <Entry x:Name="TxtRoomSize" Grid.Column="1" TextColor="Black" HeightRequest="40" WidthRequest="270" Background="White" Keyboard="Numeric" HorizontalOptions="End"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Price: " FontAttributes="Bold" Grid.Column="0" Margin="0,10,0,0" />
+                <Entry x:Name="TxtPrice" Grid.Column="1" TextColor="Black" HeightRequest="40" WidthRequest="270" Background="White" Keyboard="Numeric" HorizontalOptions="End"/>
+            </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Descriptions: " FontAttributes="Bold" Grid.Column="0" Margin="0,10,0,0" />
+                <Entry x:Name="TxtDescription" Grid.Column="1" TextColor="Black" HeightRequest="40" WidthRequest="270" Background="White" HorizontalOptions="End"/>
+            </Grid>
+        </StackLayout>
+
+        <Frame BackgroundColor="Blue" Grid.Row="3" HeightRequest="75" Margin="10">
+            <Label Text="Amenities" TextColor="White" HorizontalOptions="Center" Margin="5" FontAttributes="None" FontSize="22"/>
+        </Frame>
+
+        <ScrollView Grid.Row="4" HeightRequest="125" >
+            <ListView x:Name="AmenityListView" ItemTapped="AmenityListView_ItemTapped" HasUnevenRows="True" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ViewCell  >
+                            <Frame MaximumHeightRequest="200" MinimumWidthRequest="100" CornerRadius="20">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label Text="{Binding Name}" FontAttributes="Bold" Grid.Column="0" />
+                                    <Label Text="{Binding Price, StringFormat='Price is ₱{0:N2}'}"  Grid.Column="1"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </ScrollView>
+
+        <StackLayout Grid.Row="5" Padding="20">
+            <Label Text="Boarding House Images"
+               FontSize="24"
+               HorizontalOptions="Center" />
+
+            <CollectionView x:Name="BoardingHouseImagesCollectionView" ItemsLayout="HorizontalList" HeightRequest="250">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10">
+                            <Image Source="{Binding ImageSource}" HeightRequest="300" Aspect="AspectFill" />
+                            <Label Text="{Binding FileName}" FontAttributes="Bold" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Label x:Name="ImageMessage" TextColor="Gray" HorizontalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Grid.Row="6" VerticalOptions="CenterAndExpand" Margin="0,0,0,0">
+
+            <Image x:Name="SelectedImage" 
+                   HeightRequest="200" 
+                   WidthRequest="200" 
+                   Aspect="AspectFill"
+                   IsVisible="False" />
+
+            <Grid HorizontalOptions="CenterAndExpand" ColumnSpacing="20">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Pick an Image"
+                        Grid.Column="0" 
+                        x:Name="OnPickImage"
+                        BackgroundColor="Blue"
+                        CornerRadius="20"
+                        Clicked="OnPickImage_Clicked"
+                        VerticalOptions="CenterAndExpand" Margin="10" />
+
+                <Button Text="Upload Image"
+                        Grid.Column="1"
+                        x:Name="OnUploadImage"
+                        BackgroundColor="Blue"
+                        CornerRadius="20"
+                        Clicked="OnUploadImage_Clicked"
+                        VerticalOptions="CenterAndExpand" Margin="10" />
+                
+                <Button Text="Upload QRCode"
+                        Grid.Column="2"
+                        x:Name="UploadQRCode"
+                        BackgroundColor="Blue"
+                        CornerRadius="20"
+                        Clicked="UploadQRCode_Clicked"
+                        VerticalOptions="CenterAndExpand" Margin="10" />
+            </Grid>
+
+            
+
+            <Label x:Name="StatusMessage"
+                   TextColor="Red"
+                   FontSize="14"
+                   HorizontalOptions="CenterAndExpand" />
+
+        </StackLayout>
+        
+        <Grid Grid.Row="7" Margin="10,0,10,0" ColumnSpacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" /> 
+                <ColumnDefinition Width="*" /> 
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" x:Name="BtnAddBoardingHouse" Text="Save" CornerRadius="20" Clicked="BtnAddBoardingHouse_Clicked" BackgroundColor="Blue"/>
+            <Button Grid.Column="1" x:Name="BtnDelete" Text="Delete" Clicked="BtnDelete_Clicked" CornerRadius="20" BackgroundColor="Blue"/>
+            <Button Grid.Column="2" x:Name="BtAddMaps" Text="Maps" Clicked="BtAddMaps_Clicked" CornerRadius="20" BackgroundColor="Blue"/>
+            <Button Grid.Column="4" x:Name="BtAddAmenities" Text="Amenities" Clicked="BtAddAmenities_Clicked" CornerRadius="20" BackgroundColor="Blue"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

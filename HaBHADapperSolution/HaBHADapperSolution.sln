@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaBHAServer", "..\..\Capstone Projects\HaBHASolution\HaBHAServer\HaBHAServer.csproj", "{294AECF8-7FE6-4323-827A-F6E04ED20268}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HaBHADb", "..\..\Capstone Projects\HaBHASolution\HaBHADb\HaBHADb.sqlproj", "{42870E45-B793-4EA4-BCD4-8A565926CE2D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HaBHADbMauiApp", "HaBHADbMauiApp\HaBHADbMauiApp.csproj", "{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{294AECF8-7FE6-4323-827A-F6E04ED20268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{294AECF8-7FE6-4323-827A-F6E04ED20268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{294AECF8-7FE6-4323-827A-F6E04ED20268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{294AECF8-7FE6-4323-827A-F6E04ED20268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42870E45-B793-4EA4-BCD4-8A565926CE2D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A9CDFEB-4265-486A-91FA-BFFCD4A382E4}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3EE61A5-AB58-431F-B473-062091738A0A}
+	EndGlobalSection
+EndGlobal
